@@ -11,8 +11,6 @@
  */
 defined('INTERNAL') || die();
 
-require_once dirname(__FILE__) . '/util/util.inc.php';
-
 class PluginArtefactNote extends PluginArtefact
 {
 

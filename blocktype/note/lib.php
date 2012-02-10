@@ -37,6 +37,12 @@ class PluginBlocktypeNote extends PluginBlocktype
     {
         $configdata = $instance->get('configdata');
 
+        $title = $instance->get('title');
+        if ($title)
+        {
+            return $title;
+        }
+
         if (!empty($configdata['artefactid']))
         {
             return $instance->get_artefact_instance($configdata['artefactid'])->get('title');
@@ -52,6 +58,12 @@ class PluginBlocktypeNote extends PluginBlocktype
     public static function override_instance_title(BlockInstance $instance)
     {
         $configdata = $instance->get('configdata');
+
+        $title = $instance->get('title');
+        if ($title)
+        {
+            return $title;
+        }
 
         if (!empty($configdata['artefactid']))
         {

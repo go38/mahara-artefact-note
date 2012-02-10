@@ -1,0 +1,2 @@
+1 bug: display block title 
+2 code cleanup
