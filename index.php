@@ -17,7 +17,7 @@ $limit = param_integer('limit', 16);
 $offset = param_integer('offset', 0);
 
 $notes = get_records_select_array('artefact', "owner=$user_id AND artefacttype='note'", null, 'ctime DESC', '*', $offset, $limit);
-$count = get_record_sql("SELECT count(*) as count FROM artefact WHERE owner=$user_id AND artefacttype='note'");
+$count = get_record_sql("SELECT count(*) as count FROM {artefact} WHERE owner=$user_id AND artefacttype='note'");
 $count = $count->count;
 
 $pagination = build_pagination(array(

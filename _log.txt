@@ -1,2 +1,3 @@
 1 bug: display block title 
 2 code cleanup
+3 bug: use {} for table names
